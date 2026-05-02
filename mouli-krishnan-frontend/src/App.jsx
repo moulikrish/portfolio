@@ -1,7 +1,7 @@
 import "./pages/Styles/theme.css";
 import { useState, useEffect } from "react";
 
-import { BrowserRouter as Router, Routes, Route , useLocation} from "react-router-dom";
+import { BrowserRouter, Routes, Route , useLocation} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";

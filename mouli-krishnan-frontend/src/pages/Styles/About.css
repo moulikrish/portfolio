@@ -1,0 +1,62 @@
+.about-container {
+  padding: 60px 20px;
+}
+
+.row {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.about-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #760081;
+}
+
+.about-text {
+  color: #633a66;
+  line-height: 1.7;
+}
+
+.about-img {
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: 0.4s;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+  /* box-shadow: #760081 2px 3px 20px ; */
+}
+
+.skills-badges {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-badges span {
+  background: #f1f1f1;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn-main {
+  background: #760081;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  border: #760081 2px solid;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-main:hover {
+  background: none;
+  border: #760081 2px solid;
+  color: #760081;
+}

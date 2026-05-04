@@ -53,11 +53,11 @@ const App = () => {
   
 
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar /> 
       <AnimatedRoutes/>  
       <SocialSidebar />
-    </Router>
+    </BrowserRouter>
   );
 };
 

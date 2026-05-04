@@ -38,7 +38,7 @@ function AnimatedRoutes() {
           {darkMode ? <FaSun /> : <FaMoon />}
         </div>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}/>
+        <Route path="*" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}/>
         <Route path="/about" element={<About darkMode={darkMode} setDarkMode={setDarkMode}/>} />
         {/* <Route path="/skills" element={<Skills />} /> */}
         {/* <Route path="/experience" element={<Experience />} /> */}

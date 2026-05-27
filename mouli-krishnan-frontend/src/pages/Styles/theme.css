@@ -1,5 +1,7 @@
 body {
-  transition: background 0.4s ease, color 0.4s ease;
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
   background: white;
   color: black;
 }
@@ -16,25 +18,41 @@ body.dark {
   right: 30px;
   width: 45px;
   height: 45px;
-  font-size: 25px;
+  font-size: 45px;
+  color: #760081;
   background: transparent;
-  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 0px 20px #ff00e1;
+  /* filter: drop-shadow(2px 4px 3px rgb(204, 26, 220)); */
   transition: 0.3s;
   z-index: 1000;
 }
 
 body.dark .theme-toggle {
-  background: #222;
+  /* background: white; */
   color: white;
+  /* filter: drop-shadow(0px 6px 6px rgb(214, 227, 43)); */
 }
 
 body.dark .name {
   color: white;
+}
+
+body.dark .profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px #ffffff81;
+  transition: ease-in-out 1s;
+}
+
+body .profile-img:hover{
+    border-radius: 30%;
+    box-shadow: 0 10px 15px #ffffff81;
 }
 
 body.dark .role {
@@ -54,9 +72,16 @@ body.dark .floating-nav {
 }
 
 body.dark .nav-item {
-  background: #760081;
-  color: white;
-  mix-blend-mode:multiply;
+  /* background: #760081; */
+  color: #760081;
+  mix-blend-mode: multiply;
+}
+
+body.dark .nav-item.active {
+  background: none;
+  color: #760081;
+  box-shadow: #760081 0px 0px 3px 3px;
+  transform: translateY(-5px);
 }
 
 body.dark .nav-item:hover {
@@ -71,22 +96,22 @@ body.dark .reach-btn {
 }
 
 body.dark .reach-btn:hover {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
 }
 
-body.dark .social-sidebar{
+body.dark .social-sidebar {
   background-color: white;
 }
 
 body.dark .social-sidebar a {
-  background: #760081;
-  color: white;
+  /* background: #760081; */
+  color: #760081;
 }
 
 body.dark .social-sidebar a:hover {
-  background:none;
+  background: none;
   background-color: transparent;
   box-shadow: none;
   color: #760081;
@@ -99,8 +124,6 @@ body.dark .soc-link {
 body.dark .nav-text {
   color: white;
 }
-
-
 
 /* about */
 
@@ -122,7 +145,7 @@ body.dark .btn-main {
   color: #760081;
 }
 
-body.dark .btn-main:hover{
+body.dark .btn-main:hover {
   background-color: transparent;
   color: white;
   border: white 2px solid;

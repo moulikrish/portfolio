@@ -15,7 +15,9 @@ import About from "./pages/About";
 // import Contact from "./pages/Contact";
 
 import { FaMoon, FaSun } from "react-icons/fa";
-
+// import {GiNightSleep } from "react-icons/gi"
+import { IoInvertMode, IoInvertModeOutline  } from "react-icons/io5";
+ 
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -35,7 +37,8 @@ function AnimatedRoutes() {
 
       {/* 🌙 ☀ Toggle */}
         <div className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? <FaSun /> : <FaMoon />}
+          {darkMode ? <IoInvertMode /> : <IoInvertModeOutline  />}
+          
         </div>
       <Routes location={location} key={location.pathname}>
         <Route path="*" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}/>

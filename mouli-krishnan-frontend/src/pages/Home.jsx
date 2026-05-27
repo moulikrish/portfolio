@@ -1,18 +1,50 @@
 import React from "react";
+
 import { ReactTyped } from "react-typed";
+
 import "./Styles/Home.css";
+
 import profile from "../assets/prof1.jpeg";
 
-const Home = ({darkMode, setDarkMode}) => {
-  return (
-    <>
-      {/* <Navbar /> */}
-      <div className="home-container">
-        
+import { FaArrowRightLong } from "react-icons/fa6";
 
-        <div className="hero-section">
-          <img src={profile} alt="profile" className="profile-img" />
-          <h1 className="name">Mouli Krishnan</h1>
+const Home = () => {
+
+  const scrollToContact = () => {
+    window.location.href = "/contact";
+  };
+
+  return (
+
+    <section className="home-container">
+
+      {/* Background Glow */}
+      <div className="hero-bg-glow hero-bg-1"></div>
+      <div className="hero-bg-glow hero-bg-2"></div>
+
+      <div className="hero-section">
+
+        {/* Profile Image */}
+        <div className="profile-wrapper">
+
+          <div className="profile-ring"></div>
+
+          <img
+            src={profile}
+            alt="Mouli Krishnan"
+            className="profile-img"
+          />
+
+        </div>
+
+        {/* Name */}
+        <h1 className="name">
+          Mouli Krishnan
+        </h1>
+
+        {/* Role */}
+        <div className="role-wrapper">
+
           <ReactTyped
             className="role"
             strings={[
@@ -24,12 +56,31 @@ const Home = ({darkMode, setDarkMode}) => {
             backSpeed={40}
             backDelay={1500}
             loop
-          />{" "}
-          <br />
-          <button className="reach-btn">Reach Out</button>
+          />
+
         </div>
+
+        {/* Description */}
+        <p className="hero-desc">
+          Building clean digital experiences with
+          creativity, performance, and modern UI design.
+        </p>
+
+        {/* Button */}
+        <button
+          className="reach-btn"
+          onClick={scrollToContact}
+        >
+
+          Reach Out
+
+          <FaArrowRightLong className="btn-icon" />
+
+        </button>
+
       </div>
-    </>
+
+    </section>
   );
 };
 

@@ -1,30 +1,65 @@
 import React from "react";
-import { FaLinkedinIn, FaGithub ,FaHackerrank } from "react-icons/fa";
+
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaHackerrank,
+} from "react-icons/fa";
+
 import { SiLeetcode } from "react-icons/si";
+
 import "./SocialSlider.css";
+
+const socialLinks = [
+  {
+    icon: <FaLinkedinIn />,
+    label: "LinkedIn",
+    link: "https://www.linkedin.com/in/moulik23/",
+  },
+
+  {
+    icon: <FaGithub />,
+    label: "GitHub",
+    link: "https://github.com/moulikrish",
+  },
+
+  {
+    icon: <SiLeetcode />,
+    label: "LeetCode",
+    link: "https://leetcode.com/u/MouliKrish/",
+  },
+
+  {
+    icon: <FaHackerrank />,
+    label: "HackerRank",
+    link: "https://www.hackerrank.com/profile/moulikrish2020",
+  },
+];
 
 const SocialSidebar = () => {
   return (
     <div className="social-sidebar">
-      <a className="soc-item" href="https://www.linkedin.com/in/moulik23/" target="_blank" rel="noreferrer">
-        <FaLinkedinIn />
-        <span className="soc-link">Linikedin</span>
-      </a>
 
-      <a className="soc-item" href="https://github.com/moulikrish"  target="_blank" rel="noreferrer">
-        <FaGithub />
-        <span className="soc-link">Github</span>
-      </a>
+      {socialLinks.map((item, index) => (
+        <a
+          key={index}
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          className="soc-item"
+        >
 
-      <a className="soc-item" href="https://leetcode.com/u/MouliKrish/" target="_blank" rel="noreferrer">
-        <SiLeetcode />
-        <span className="soc-link">Leetcode</span>
-      </a>
+          <div className="soc-icon">
+            {item.icon}
+          </div>
 
-      <a className="soc-item" href="https://www.hackerrank.com/profile/moulikrish2020" target="_blank" rel="noreferrer">
-        <FaHackerrank />
-        <span className="soc-link">Hackerrank</span>
-      </a>
+          <span className="soc-link">
+            {item.label}
+          </span>
+
+        </a>
+      ))}
+
     </div>
   );
 };

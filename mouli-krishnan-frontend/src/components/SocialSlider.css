@@ -1,54 +1,177 @@
+/* =========================
+   SOCIAL SIDEBAR
+========================= */
+
 .social-sidebar {
   position: fixed;
-  right: 0px;
+
+  right: 0;
   top: 50%;
-  background-color: #760081;
-  padding: 30px 20px 30px 20px;
-  border-radius: 20px 0px 0px 20px;
+
   transform: translateY(-50%);
+
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  z-index: 1000;
+  gap: 18px;
+
+  padding: 22px 14px;
+
+  background: rgba(118, 0, 129, 0.92);
+
+  border-radius: 28px 0 0 28px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 25px rgba(118, 0, 129, 0.35),
+    inset 0 0 10px rgba(255,255,255,0.05);
+
+  z-index: 9999;
 }
 
-.social-sidebar a {
-  width: 45px;
-  height: 45px;
-  color: white;
-  background: transparent;
-  border-radius: 12px;
+/* =========================
+   SOCIAL ITEM
+========================= */
+
+.soc-item {
+  position: relative;
+
+  width: 58px;
+  height: 58px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
-  /* box-shadow: 0 8px 20px rgba(0,0,0,0.15); */
-  transition: all 0.3s ease;
+
+  border-radius: 18px;
+
+  color: white;
+
+  text-decoration: none;
+
+  transition: all 0.35s ease;
+
+  overflow: visible;
 }
 
-.social-sidebar a:hover {
-  /* transform: translateX(-5px); */
-  background: none;
-  color: white;
+/* Hover */
+.soc-item:hover {
+  transform: translateX(-8px);
+
+  background: rgba(255,255,255,0.08);
+
+  box-shadow:
+    0 0 18px rgba(255,255,255,0.18),
+    0 0 30px rgba(255,0,255,0.25);
 }
+
+/* =========================
+   ICON
+========================= */
+
+.soc-icon {
+  font-size: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+}
+
+.soc-item:hover .soc-icon {
+  transform: scale(1.15);
+}
+
+/* =========================
+   TOOLTIP
+========================= */
 
 .soc-link {
   position: absolute;
-  right: 0px;
-  /* background: black; */
+
+  right: 75px;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+  background: rgba(255,255,255,0.95);
+
   color: #760081;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 20px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: bold;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
   white-space: nowrap;
+
   opacity: 0;
-  transition: 0.3s ease-in-out;
-  pointer-events: none;
+  visibility: hidden;
+
+  transform: translateX(10px);
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 5px 20px rgba(0,0,0,0.15);
 }
 
+/* Tooltip Arrow */
+.soc-link::before {
+  content: "";
+
+  position: absolute;
+
+  right: -6px;
+  top: 50%;
+
+  transform: translateY(-50%) rotate(45deg);
+
+  width: 12px;
+  height: 12px;
+
+  background: white;
+}
+
+/* Show Tooltip */
 .soc-item:hover .soc-link {
   opacity: 1;
-  transform: translateX(-80px);
+  visibility: visible;
+
+  transform: translateX(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .social-sidebar {
+    right: 50%;
+    top: auto;
+    bottom: 90px;
+
+    transform: translateX(50%);
+
+    flex-direction: row;
+
+    border-radius: 24px;
+
+    padding: 12px 18px;
+  }
+
+  .soc-item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .soc-icon {
+    font-size: 22px;
+  }
+
+  .soc-link {
+    display: none;
+  }
 }

@@ -14,3 +14,71 @@
 body {
   padding-bottom: 100px;
 }
+
+/* =========================
+   THEME VARIABLES
+========================= */
+
+:root {
+
+  --skills-bg:
+    radial-gradient(circle at top, #f8f4ff, #ece3ff 70%);
+
+  --skills-card:
+    rgba(255,255,255,0.7);
+
+  --skills-border:
+    rgba(118,0,129,0.12);
+
+  --skills-text:
+    #2d1141;
+
+  --skills-subtext:
+    #7f5a96;
+
+  --skills-line:
+    rgba(118,0,129,0.2);
+
+  --skills-bubble:
+    rgba(255,255,255,0.8);
+
+  --skills-shadow:
+    rgba(118,0,129,0.18);
+
+  --skills-grid:
+    rgba(118,0,129,0.05);
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+
+  --skills-bg:
+    radial-gradient(circle at top, #24003d, #090010 70%);
+
+  --skills-card:
+    rgba(255,255,255,0.06);
+
+  --skills-border:
+    rgba(255,255,255,0.08);
+
+  --skills-text:
+    white;
+
+  --skills-subtext:
+    #d4b3ff;
+
+  --skills-line:
+    rgba(255,255,255,0.1);
+
+  --skills-bubble:
+    rgba(0,0,0,0.35);
+
+  --skills-shadow:
+    rgba(118,0,129,0.35);
+
+  --skills-grid:
+    rgba(255,255,255,0.04);
+}

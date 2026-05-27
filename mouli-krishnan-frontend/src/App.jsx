@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SocialSidebar from "./components/SocialSlider";
 import About from "./pages/About";
-// import Skills from "./pages/Skills";
+import Skills from "./pages/Skills";
 // import Experience from "./pages/Experience";
 // import Services from "./pages/Services";
 // import Contact from "./pages/Contact";
@@ -43,7 +43,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={location.pathname}>
         <Route path="*" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}/>
         <Route path="/about" element={<About darkMode={darkMode} setDarkMode={setDarkMode}/>} />
-        {/* <Route path="/skills" element={<Skills />} /> */}
+        <Route path="/skills" element={<Skills />} />
         {/* <Route path="/experience" element={<Experience />} /> */}
         {/* <Route path="/services" element={<Services />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}

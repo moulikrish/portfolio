@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 
 import "./Styles/Home.css";
 
-import profile from "../assets/prof4.jpg";
+import profile from "../assets/prof5.jpg";
 
 import { FaArrowRightLong } from "react-icons/fa6";
 

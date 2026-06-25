@@ -1,6 +1,6 @@
 import React from "react";
 
-import img from "../assets/prof2.jpeg";
+import img from "../assets/prof3.png";
 import resume from "../assets/Mouli_Krishnan_profile.pdf";
 
 import "./Styles/About.css";

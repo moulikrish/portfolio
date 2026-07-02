@@ -1,28 +1,22 @@
 import "./pages/Styles/theme.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-import { BrowserRouter, Routes, Route , useLocation} from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+
 import { AnimatePresence } from "framer-motion";
 
 import Navbar from "./components/Navbar";
+import SocialSidebar from "./components/SocialSlider";
 
 import Home from "./pages/Home";
-import SocialSidebar from "./components/SocialSlider";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
-// import Experience from "./pages/Experience";
-// import Services from "./pages/Services";
-// import Contact from "./pages/Contact";
 
-import { FaMoon, FaSun } from "react-icons/fa";
-// import {GiNightSleep } from "react-icons/gi"
-import { IoInvertMode, IoInvertModeOutline  } from "react-icons/io5";
- 
+import { IoInvertMode, IoInvertModeOutline } from "react-icons/io5";
 
-function AnimatedRoutes() {
+function AnimatedRoutes({ darkMode, setDarkMode }) {
   const location = useLocation();
 
-  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -33,35 +27,36 @@ function AnimatedRoutes() {
   }, [darkMode]);
 
   return (
-    <AnimatePresence mode="wait">
+    <>
+      <div className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? <IoInvertMode /> : <IoInvertModeOutline />}
+      </div>
 
-      {/* 🌙 ☀ Toggle */}
-        <div className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? <IoInvertMode /> : <IoInvertModeOutline  />}
-          
-        </div>
-      <Routes location={location} key={location.pathname}>
-        <Route path="*" element={<Home darkMode={darkMode} setDarkMode={setDarkMode} />}/>
-        <Route path="/about" element={<About darkMode={darkMode} setDarkMode={setDarkMode}/>} />
-        <Route path="/skills" element={<Skills />} />
-        {/* <Route path="/experience" element={<Experience />} /> */}
-        {/* <Route path="/services" element={<Services />} /> */}
-        {/* <Route path="/contact" element={<Contact />} /> */}
-      </Routes>
-    </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/about" element={<About />} />
+
+          <Route path="/skills" element={<Skills />} />
+        </Routes>
+      </AnimatePresence>
+    </>
   );
 }
 
-const App = () => {
-  
+export default function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const [showIntro, setShowIntro] = useState(true);
 
   return (
     <BrowserRouter>
-      <Navbar /> 
-      <AnimatedRoutes/>  
-      <SocialSidebar />
+      <Navbar showIntro={showIntro} setShowIntro={setShowIntro} />
+
+      <AnimatedRoutes darkMode={darkMode} setDarkMode={setDarkMode} />
+
+      <SocialSidebar showIntro={showIntro} />
     </BrowserRouter>
   );
-};
-
-export default App;
+}

@@ -1,65 +1,55 @@
-import React from "react";
+import React, { useContext } from "react";
 
-import {
-  FaLinkedinIn,
-  FaGithub,
-  FaHackerrank,
-} from "react-icons/fa";
+import { FaGithub, FaHackerrank, FaLinkedinIn } from "react-icons/fa";
 
 import { SiLeetcode } from "react-icons/si";
 
 import "./SocialSlider.css";
+import { LanguageContext } from "../context/LanguageContext";
 
-const socialLinks = [
-  {
-    icon: <FaLinkedinIn />,
-    label: "LinkedIn",
-    link: "https://www.linkedin.com/in/moulik23/",
-  },
+const SocialSidebar = ({ showIntro }) => {
+  const { text } = useContext(LanguageContext);
 
-  {
-    icon: <FaGithub />,
-    label: "GitHub",
-    link: "https://github.com/moulikrish",
-  },
+  const socialLinks = [
+    {
+      icon: <FaLinkedinIn />,
+      label: text.linkedin,
+      link: "https://www.linkedin.com/in/moulik23/",
+    },
+    {
+      icon: <FaGithub />,
+      label: text.github,
+      link: "https://github.com/moulikrish",
+    },
+    {
+      icon: <SiLeetcode />,
+      label: text.leetcode,
+      link: "https://leetcode.com/u/MouliKrish/",
+    },
+    {
+      icon: <FaHackerrank />,
+      label: text.hackerrank,
+      link: "https://www.hackerrank.com/profile/moulikrish2020",
+    },
+  ];
 
-  {
-    icon: <SiLeetcode />,
-    label: "LeetCode",
-    link: "https://leetcode.com/u/MouliKrish/",
-  },
+  if (showIntro) return null;
 
-  {
-    icon: <FaHackerrank />,
-    label: "HackerRank",
-    link: "https://www.hackerrank.com/profile/moulikrish2020",
-  },
-];
-
-const SocialSidebar = () => {
   return (
     <div className="social-sidebar">
-
-      {socialLinks.map((item, index) => (
+      {socialLinks.map((item) => (
         <a
-          key={index}
+          key={item.label}
           href={item.link}
           target="_blank"
           rel="noreferrer"
           className="soc-item"
         >
+          <div className="soc-icon">{item.icon}</div>
 
-          <div className="soc-icon">
-            {item.icon}
-          </div>
-
-          <span className="soc-link">
-            {item.label}
-          </span>
-
+          <span className="soc-link">{item.label}</span>
         </a>
       ))}
-
     </div>
   );
 };

@@ -1,0 +1,174 @@
+/* ===================================
+   INTRO OVERLAY
+=================================== */
+
+.intro-overlay{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+
+    background:rgba(0,0,0,.65);
+
+    backdrop-filter:blur(5px);
+
+    z-index:9998;
+
+    animation:fadeIn .8s ease;
+}
+
+/* ===================================
+   POINTER
+=================================== */
+
+.intro-pointer{
+
+    position:absolute;
+
+    top:35px;
+    left:75px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    color:#fff;
+
+    pointer-events:none;
+}
+
+/* ===================================
+   ARROW
+=================================== */
+
+.intro-arrow{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+
+    animation:arrowFloat 1.5s ease-in-out infinite;
+
+    user-select:none;
+    pointer-events:none;
+}
+
+/* If using image */
+
+.intro-arrow img{
+
+    width:150px;
+
+    animation:arrowFloat 1.5s ease-in-out infinite;
+}
+
+/* ===================================
+   TITLE
+=================================== */
+
+.intro-title{
+
+    margin-top:-10px;
+    margin-left:55px;
+
+    display:flex;
+    flex-direction:column;
+
+    font-size:2rem;
+
+    font-weight:300;
+
+    letter-spacing:4px;
+
+    line-height:1.25;
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,.2);
+}
+
+.intro-title span{
+
+    display:block;
+}
+
+/* ===================================
+   ANIMATIONS
+=================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes arrowFloat{
+
+    0%{
+
+        transform:
+        translate(0,0)
+        rotate(-8deg);
+
+    }
+
+    50%{
+
+        transform:
+        translate(-8px,-10px)
+        rotate(-14deg);
+
+    }
+
+    100%{
+
+        transform:
+        translate(0,0)
+        rotate(-8deg);
+
+    }
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .intro-pointer{
+
+        top:20px;
+        left:20px;
+
+    }
+
+    .intro-arrow{
+
+        font-size:65px;
+
+    }
+
+    .intro-title{
+
+        margin-left:35px;
+
+        font-size:1.3rem;
+
+        letter-spacing:2px;
+
+    }
+
+}

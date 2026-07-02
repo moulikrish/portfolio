@@ -9,9 +9,7 @@ body {
   background: #ffffff;
   color: #111111;
 
-  font-family:
-    "Poppins",
-    sans-serif;
+  font-family: "Poppins", sans-serif;
 
   overflow-x: hidden;
 
@@ -25,8 +23,12 @@ body {
 ========================= */
 
 body.dark {
-  background:
-    radial-gradient(circle at top left, #8b0096, #4b0053 45%, #240028);
+  background: radial-gradient(
+    circle at top left,
+    #8b0096,
+    #4b0053 45%,
+    #240028
+  );
 
   color: white;
 }
@@ -50,7 +52,7 @@ body.dark {
 
   border-radius: 50%;
 
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
 
   backdrop-filter: blur(12px);
 
@@ -64,26 +66,23 @@ body.dark {
 
   transition: all 0.35s ease;
 
-  box-shadow:
-    0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Hover */
 .theme-toggle:hover {
   transform: rotate(20deg) scale(1.08);
 
-  box-shadow:
-    0 10px 25px rgba(118,0,129,0.2);
+  box-shadow: 0 10px 25px rgba(118, 0, 129, 0.2);
 }
 
 /* Dark Toggle */
 body.dark .theme-toggle {
   color: white;
 
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.08);
 
-  box-shadow:
-    0 5px 25px rgba(255,255,255,0.08);
+  box-shadow: 0 5px 25px rgba(255, 255, 255, 0.08);
 }
 
 /* =========================
@@ -95,23 +94,23 @@ body.dark .name {
 }
 
 body.dark .role {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 body.dark .hero-desc {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 body.dark .profile-img {
   box-shadow:
-    0 15px 35px rgba(255,255,255,0.15),
-    0 0 40px rgba(255,255,255,0.08);
+    0 15px 35px rgba(255, 255, 255, 0.15),
+    0 0 40px rgba(255, 255, 255, 0.08);
 }
 
 body.dark .profile-img:hover {
   box-shadow:
-    0 20px 45px rgba(255,255,255,0.18),
-    0 0 50px rgba(255,255,255,0.12);
+    0 20px 45px rgba(255, 255, 255, 0.18),
+    0 0 50px rgba(255, 255, 255, 0.12);
 }
 
 /* =========================
@@ -155,10 +154,9 @@ body.dark .btn-main:hover {
 ========================= */
 
 body.dark .floating-nav {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
 
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.12);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
 }
 
 body.dark .nav-item {
@@ -166,16 +164,15 @@ body.dark .nav-item {
 }
 
 body.dark .nav-item:hover {
-  background: rgba(118,0,129,0.08);
+  background: rgba(118, 0, 129, 0.08);
 
   color: #760081;
 }
 
 body.dark .nav-item.active {
-  background: rgba(118,0,129,0.12);
+  background: rgba(118, 0, 129, 0.12);
 
-  box-shadow:
-    0 0 14px rgba(118,0,129,0.35);
+  box-shadow: 0 0 14px rgba(118, 0, 129, 0.35);
 }
 
 body.dark .nav-text {
@@ -188,15 +185,19 @@ body.dark .nav-text::before {
   background: #760081;
 }
 
+body.dark .logo {
+  background: #fffdff;
+  padding: 10px 10px 10px 10px;
+}
+
 /* =========================
    SOCIAL SIDEBAR DARK MODE
 ========================= */
 
 body.dark .social-sidebar {
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
 
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.12);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
 }
 
 body.dark .soc-item {
@@ -204,7 +205,7 @@ body.dark .soc-item {
 }
 
 body.dark .soc-item:hover {
-  background: rgba(118,0,129,0.08);
+  background: rgba(118, 0, 129, 0.08);
 
   color: #760081;
 }
@@ -228,16 +229,11 @@ body.dark .about-title {
 }
 
 body.dark .about-line {
-  background:
-    linear-gradient(
-      to right,
-      white,
-      rgba(255,255,255,0.5)
-    );
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.5));
 }
 
 body.dark .about-text {
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 body.dark .about-text strong {
@@ -245,9 +241,9 @@ body.dark .about-text strong {
 }
 
 body.dark .skills-badges span {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
   color: white;
 }
@@ -271,7 +267,7 @@ body.dark .skills-badges span:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(118,0,129,0.45);
+  background: rgba(118, 0, 129, 0.45);
 
   border-radius: 20px;
 }
@@ -279,8 +275,6 @@ body.dark .skills-badges span:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #760081;
 }
-
-
 
 body.dark .skill-bubble {
   color: #760081;
@@ -292,7 +286,6 @@ body.dark .skill-bubble {
 ========================= */
 
 @media (max-width: 768px) {
-
   .theme-toggle {
     width: 48px;
     height: 48px;
@@ -302,4 +295,19 @@ body.dark .skill-bubble {
     top: 18px;
     right: 18px;
   }
+}
+
+/* ===========================
+LANGUAGE
+=========================== */
+
+body.dark .language-box select {
+  background: white;
+
+  color: #760081;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3E%3Cpath fill='%23760081' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center; /* ← Change this */
+  background-size: 12px;
 }

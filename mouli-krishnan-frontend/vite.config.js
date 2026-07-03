@@ -1,21 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
-    react({
-      babel: {
-        plugins: [["babel-plugin-react-compiler"]],
-      },
-    }),
+    react(),
     tailwindcss(),
   ],
 
-  // 🔥 IMPORTANT FIX
-  base: "/",   // ensures correct asset paths in production
+  base: "/",
 
   build: {
-    outDir: "dist", // default for Vite, but explicitly safer
+    outDir: "dist",
   },
 });

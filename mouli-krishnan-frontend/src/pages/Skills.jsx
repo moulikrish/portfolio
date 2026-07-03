@@ -24,7 +24,7 @@ import {
   SiTailwindcss,
   SiMongodb,
   SiPostman,
-  SiCanva,
+  SiCanvas,
 } from "react-icons/si";
 
 import "./Styles/Skills.css";
@@ -85,7 +85,7 @@ const skillData = [
     skills: [
       { name: "Photoshop", icon: <FaPalette /> },
       { name: "Illustrator", icon: <FaPenNib /> },
-      { name: "Canva", icon: <SiCanva /> },
+      { name: "Canva", icon: <SiCanvas /> },
       { name: "Corel Draw", icon: <FaPalette /> },
       { name: "Figma", icon: <FaFigma /> },
     ],

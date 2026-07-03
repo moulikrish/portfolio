@@ -6,7 +6,7 @@ import ExperienceCard from "./ExperienceCard";
 import JourneyCompleted from "./JourneyCompleted";
 import Loader from "./Loader";
 
-import experienceData from "./experienceData";
+import experienceData from "./ExperienceData";
 
 import "./experience.css";
 

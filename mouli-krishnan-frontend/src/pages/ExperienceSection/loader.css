@@ -1,0 +1,13 @@
+.loader {
+  padding: 20px 35px;
+
+  background: #111;
+
+  border-radius: 20px;
+
+  color: white;
+
+  border: 1px solid #760081;
+
+  font-size: 22px;
+}

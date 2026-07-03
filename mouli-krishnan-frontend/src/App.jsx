@@ -11,6 +11,7 @@ import SocialSidebar from "./components/SocialSlider";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
+import Experience from "./pages/ExperienceSection/Experience"
 
 import { IoInvertMode, IoInvertModeOutline } from "react-icons/io5";
 
@@ -39,6 +40,8 @@ function AnimatedRoutes({ darkMode, setDarkMode }) {
           <Route path="/about" element={<About />} />
 
           <Route path="/skills" element={<Skills />} />
+
+          <Route path="/experience" element={<Experience/>} />
         </Routes>
       </AnimatePresence>
     </>

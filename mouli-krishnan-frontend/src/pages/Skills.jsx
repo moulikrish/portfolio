@@ -20,12 +20,7 @@ import {
   FaPenNib,
 } from "react-icons/fa";
 
-import {
-  SiTailwindcss,
-  SiMongodb,
-  SiPostman,
-  SiCanvas,
-} from "react-icons/si";
+import { SiTailwindcss, SiMongodb, SiPostman, SiCanvas } from "react-icons/si";
 
 import "./Styles/Skills.css";
 
@@ -106,9 +101,7 @@ const skillData = [
 
 const Skills = () => {
   return (
-
     <section className="skills-section">
-
       {/* Background */}
       <div className="space-grid"></div>
 
@@ -127,15 +120,9 @@ const Skills = () => {
 
       {/* Heading */}
       <div className="skills-heading">
+        <h1>SKILL UNIVERSE</h1>
 
-        <h1>
-          SKILL UNIVERSE
-        </h1>
-
-        <p>
-          Explore My Technology Galaxy
-        </p>
-
+        <p>Explore My Technology Galaxy</p>
       </div>
 
       {/* Timeline */}
@@ -143,92 +130,60 @@ const Skills = () => {
 
       {/* Cards */}
       <div className="skills-container">
-
         {skillData.map((category, index) => (
-
           <motion.div
             key={index}
-
             initial={{
               opacity: 0,
               y: 100,
             }}
-
             whileInView={{
               opacity: 1,
               y: 0,
             }}
-
             transition={{
               duration: 0.6,
               delay: index * 0.15,
             }}
-
             viewport={{
               once: true,
             }}
-
             className={`skill-card ${
-              index % 2 === 0
-                ? "left-card"
-                : "right-card"
+              index % 2 === 0 ? "left-card" : "right-card"
             }`}
           >
-
             {/* Connector */}
             <div className="connector-dot"></div>
 
             {/* Main Planet */}
             <div className="planet-card">
-
               <div className="planet-header">
+                <div className="planet-icon">{category.icon}</div>
 
-                <div className="planet-icon">
-                  {category.icon}
-                </div>
-
-                <h2>
-                  {category.title}
-                </h2>
-
+                <h2>{category.title}</h2>
               </div>
 
               {/* Orbit Skills */}
               <div className="skills-orbit">
-
                 {category.skills.map((skill, i) => (
-
                   <motion.div
                     key={i}
-
                     whileHover={{
                       scale: 1.12,
                       y: -5,
                     }}
-
                     className="skill-bubble"
                   >
+                    <div className="skill-icon">{skill.icon}</div>
 
-                    <div className="skill-icon">
-                      {skill.icon}
-                    </div>
-
-                    <span>
-                      {skill.name}
-                    </span>
-
+                    <span>{skill.name}</span>
                   </motion.div>
                 ))}
-
               </div>
-
             </div>
-
           </motion.div>
         ))}
-
       </div>
-
     </section>
   );
 };

@@ -3,54 +3,45 @@
 ========================= */
 
 :root {
+  --skills-bg: radial-gradient(circle at top, #f7f1ff, #ece1ff 70%);
 
-  --skills-bg:
-    radial-gradient(circle at top, #f7f1ff, #ece1ff 70%);
+  --skills-text: white;
 
-  --skills-text:
-    #2d1141;
+  --skills-heading: #760081;
 
-  --skills-subtext:
-    #7f5a96;
+  --skills-subtext: #7f5a96;
 
-  --skills-grid:
-    rgba(118,0,129,0.05);
+  --skills-grid: rgba(118, 0, 129, 0.05);
 
-  --timeline-line:
-    rgba(118,0,129,0.18);
+  --timeline-line: rgba(118, 0, 129, 0.18);
 
-  --timeline-glow:
-    rgba(118,0,129,0.5);
+  --timeline-glow: rgba(118, 0, 129, 0.5);
 
-  --card-bg:
-    rgba(255,255,255,0.75);
+  --card-bg: #760081;
 
-  --card-border:
-    rgba(118,0,129,0.12);
+  --card-border: rgba(118, 0, 129, 0.12);
 
-  --card-shadow:
-    rgba(118,0,129,0.15);
+  --card-shadow: rgba(118, 0, 129, 0.15);
 
-  --bubble-bg:
-    rgba(255,255,255,0.7);
+  --orbit-bg: white;
 
-  --bubble-border:
-    rgba(118,0,129,0.1);
+  --orbit-text: #760081;
 
-  --bubble-hover:
-    rgba(118,0,129,0.15);
+  --bubble-bg: rgba(208, 56, 56, 0.7);
 
-  --planet-bg:
-    rgba(255,255,255,0.6);
+  --bubble-border: rgba(118, 0, 129, 0.1);
 
-  --planet-shadow:
-    rgba(200,74,211,0.25);
+  --bubble-hover: rgba(118, 0, 129, 0.15);
 
-  --connector:
-    #c84ad3;
+  --planet-bg: #760081;
 
-  --star:
-    rgba(118,0,129,0.45);
+  --planet-border : white;
+
+  --planet-shadow: rgba(200, 74, 211, 0.25);
+
+  --connector: #c84ad3;
+
+  --star: rgba(118, 0, 129, 0.45);
 }
 
 /* =========================
@@ -58,54 +49,45 @@
 ========================= */
 
 body.dark {
+  --skills-bg: radial-gradient(circle at top, #24003d, #090010 70%);
 
-  --skills-bg:
-    radial-gradient(circle at top, #24003d, #090010 70%);
+  --skills-text: #760081;
 
-  --skills-text:
-    white;
+  --skills-heading: white;
 
-  --skills-subtext:
-    #d4b3ff;
+  --skills-subtext: #d4b3ff;
 
-  --skills-grid:
-    rgba(255,255,255,0.04);
+  --skills-grid: rgba(255, 255, 255, 0.04);
 
-  --timeline-line:
-    rgba(255,255,255,0.08);
+  --timeline-line: rgba(255, 255, 255, 0.08);
 
-  --timeline-glow:
-    rgba(118,0,129,0.6);
+  --timeline-glow: rgba(118, 0, 129, 0.6);
 
-  --card-bg:
-    rgba(255,255,255,0.06);
+  --card-bg: white;
 
-  --card-border:
-    rgba(255,255,255,0.08);
+  --card-border: rgba(255, 255, 255, 0.08);
 
-  --card-shadow:
-    rgba(118,0,129,0.3);
+  --card-shadow: rgba(118, 0, 129, 0.3);
 
-  --bubble-bg:
-    rgba(0,0,0,0.35);
+  --orbit-bg: #760081;
 
-  --bubble-border:
-    rgba(255,255,255,0.08);
+  --orbit-text: white;
 
-  --bubble-hover:
-    rgba(255,255,255,0.2);
+  --bubble-bg: rgba(0, 0, 0, 0.35);
 
-  --planet-bg:
-    rgba(255,255,255,0.08);
+  --bubble-border: rgba(255, 255, 255, 0.08);
 
-  --planet-shadow:
-    rgba(200,74,211,0.35);
+  --bubble-hover: rgba(255, 255, 255, 0.2);
 
-  --connector:
-    #c84ad3;
+  --planet-bg: white;
 
-  --star:
-    rgba(255,255,255,0.9);
+  --planet-border : #760081;
+
+  --planet-shadow: rgba(200, 74, 211, 0.35);
+
+  --connector: white;
+
+  --star: rgba(255, 255, 255, 0.9);
 }
 
 /* =========================
@@ -117,7 +99,7 @@ body.dark {
 
   min-height: 100vh;
 
-  padding: 120px 20px;
+  padding: 50px 130px;
 
   overflow: hidden;
 
@@ -170,7 +152,6 @@ body.dark {
 }
 
 @keyframes blink {
-
   from {
     opacity: 0.2;
   }
@@ -189,20 +170,20 @@ body.dark {
 
   text-align: center;
 
-  margin-bottom: 120px;
+  margin-bottom: 70px;
 
   z-index: 2;
 }
 
 .skills-heading h1 {
-  font-size: 58px;
+  font-size: 50px;
   font-weight: 800;
 
   letter-spacing: 6px;
 
   margin-bottom: 15px;
 
-  color: var(--skills-text);
+  color: var(--skills-heading);
 }
 
 .skills-heading p {
@@ -218,7 +199,7 @@ body.dark {
 .timeline-line {
   position: absolute;
 
-  top: 280px;
+  top: 260px;
   left: 50%;
 
   width: 4px;
@@ -226,13 +207,12 @@ body.dark {
 
   transform: translateX(-50%);
 
-  background:
-    linear-gradient(
-      to bottom,
-      var(--timeline-line),
-      var(--timeline-glow),
-      var(--timeline-line)
-    );
+  background: linear-gradient(
+    to bottom,
+    var(--timeline-line),
+    var(--timeline-glow),
+    var(--timeline-line)
+  );
 
   border-radius: 50px;
 }
@@ -244,7 +224,7 @@ body.dark {
 .skills-container {
   position: relative;
 
-  max-width: 1300px;
+  max-width: 1200px;
 
   margin: auto;
 
@@ -269,13 +249,13 @@ body.dark {
 .left-card {
   align-self: flex-start;
 
-  padding-right: 80px;
+  padding-right: 60px;
 }
 
 .right-card {
   align-self: flex-end;
 
-  padding-left: 80px;
+  padding-left: 60px;
 }
 
 /* =========================
@@ -294,8 +274,7 @@ body.dark {
 
   background: var(--connector);
 
-  box-shadow:
-    0 0 25px var(--connector);
+  box-shadow: 0 0 25px var(--connector);
 }
 
 .left-card .connector-dot {
@@ -313,7 +292,7 @@ body.dark {
 .planet-card {
   position: relative;
 
-  padding: 40px;
+  padding: 35px;
 
   border-radius: 30px;
 
@@ -323,8 +302,7 @@ body.dark {
 
   border: 1px solid var(--card-border);
 
-  box-shadow:
-    0 0 40px var(--card-shadow);
+  box-shadow: 0 0 40px var(--card-shadow);
 
   transition: 0.4s ease;
 }
@@ -332,8 +310,7 @@ body.dark {
 .planet-card:hover {
   transform: translateY(-8px);
 
-  box-shadow:
-    0 0 50px var(--planet-shadow);
+  box-shadow: 0 0 50px var(--planet-shadow);
 }
 
 /* =========================
@@ -363,8 +340,9 @@ body.dark {
 
   background: var(--planet-bg);
 
-  box-shadow:
-    0 0 25px var(--planet-shadow);
+  border: var(--planet-border) 3px solid;
+
+  box-shadow: 0 0 25px var(--planet-shadow);
 }
 
 .planet-header h2 {
@@ -395,11 +373,11 @@ body.dark {
 
   border-radius: 40px;
 
-  color: white;
+  color: var(--orbit-text);
 
   border: 1px solid var(--bubble-border);
 
-  background: #760081;
+  background: var(--orbit-bg);
 
   cursor: pointer;
 
@@ -409,8 +387,7 @@ body.dark {
 .skill-bubble:hover {
   transform: translateY(-3px);
 
-  box-shadow:
-    0 0 25px var(--bubble-hover);
+  box-shadow: 0 0 25px var(--bubble-hover);
 }
 
 .skill-icon {
@@ -419,14 +396,14 @@ body.dark {
   display: flex;
   align-items: center;
 
-  color: inherit;
+  /* color: inherit; */
 }
 
 .skill-bubble span {
   font-size: 15px;
   font-weight: 600;
 
-  color: inherit;
+  /* color: inherit; */
 }
 
 /* =========================
@@ -434,7 +411,6 @@ body.dark {
 ========================= */
 
 @media (max-width: 992px) {
-
   .skill-card {
     width: 100%;
   }
@@ -462,7 +438,6 @@ body.dark {
 }
 
 @media (max-width: 576px) {
-
   .skills-section {
     padding: 100px 15px;
   }

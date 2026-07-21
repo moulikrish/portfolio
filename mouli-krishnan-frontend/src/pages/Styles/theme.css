@@ -276,10 +276,10 @@ body.dark .skills-badges span:hover {
   background: #760081;
 }
 
-body.dark .skill-bubble {
+/* body.dark .skill-bubble {
   color: #760081;
   background: white;
-}
+} */
 
 /* =========================
    RESPONSIVE
@@ -311,3 +311,4 @@ body.dark .language-box select {
   background-position: right 15px center; /* ← Change this */
   background-size: 12px;
 }
+
